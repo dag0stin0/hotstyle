@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>HotStyle Takeover III — April 27, 2026 — Las Vegas</title>
+<meta name="description" content="HotStyle Takeover III at Tao, The Venetian. Live podcast, roast comedy, DJ set. April 27, 2026, 1PM–6PM. 300 tickets. Produced by PubKey.">
+<meta property="og:title" content="HotStyle Takeover III — Las Vegas">
+<meta property="og:description" content="Live podcast, roast comedy, DJ set. April 27 at Tao, The Venetian. 300 tickets.">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap">
+<style>
+:root{--bg:#0B0908;--sf:#141210;--sf2:#1C1917;--tx:#EDE6DA;--tm:#8A7F72;--tf:#4A4238;--gold:#C8A44E;--amber:#D4740E;--red:#7A1818;--bdr:rgba(200,164,78,.1);--pixel:'Press Start 2P',monospace;--serif:'Bodoni Moda',Georgia,serif;--sans:'Sora',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;--nav-h:48px;--ease:cubic-bezier(.22,1,.36,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{font-family:var(--sans);background:var(--bg);color:var(--tx);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media(min-width:801px){body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}}
+
+/* Scroll progress */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--red),var(--gold),var(--amber));z-index:300;width:0;transition:width .15s}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:250;display:flex;align-items:center;padding:0 1.5rem;height:var(--nav-h);background:rgba(11,9,8,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,164,78,.06);opacity:0;transform:translateY(-100%);transition:opacity .4s,transform .4s;pointer-events:none}
+nav.show{opacity:1;transform:none;pointer-events:auto}
+.nav-brand{font-family:var(--pixel);font-size:11px;color:var(--gold);letter-spacing:.04em;margin-right:auto;text-decoration:none}
+.nav-links{display:flex;gap:.2rem;align-items:center}
+.nav-links a{font-family:var(--mono);font-size:11px;color:var(--tf);text-decoration:none;padding:.3rem .6rem;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--amber)}
+.nav-rsvp{font-family:var(--mono);font-size:11px;padding:.4rem .8rem;color:var(--bg);background:var(--gold);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;margin-left:.8rem;transition:background .3s}
+.nav-rsvp:hover{background:var(--amber)}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px;margin-left:auto}
+.hamburger span{width:20px;height:1.5px;background:var(--gold);transition:all .3s var(--ease)}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:rgba(11,9,8,.96);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;z-index:240;opacity:0;transition:opacity .3s}
+.mobile-menu.open{opacity:1}
+.mobile-menu a{font-family:var(--mono);font-size:13px;color:var(--tm);text-decoration:none;letter-spacing:.12em;text-transform:uppercase}
+
+/* HERO — Full viewport cover image */
+.hero{position:relative;width:100%;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:#080604}
+.hero-cover{position:absolute;inset:0;z-index:1}
+.hero-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-cover::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,4,.15) 0%,rgba(8,6,4,0) 30%,rgba(8,6,4,0) 55%,rgba(8,6,4,.85) 85%,var(--bg) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 1.5rem;max-width:700px}
+.hero-logo{width:clamp(280px,60vw,500px);margin-bottom:1.5rem;filter:drop-shadow(0 4px 30px rgba(0,0,0,.6))}
+.hero-sign{border:2px solid var(--amber);padding:1.5rem 2rem;margin:0 auto;max-width:440px;background:rgba(8,6,4,.65);backdrop-filter:blur(6px);position:relative}
+.hero-sign::before{content:'';position:absolute;inset:4px;border:1px solid rgba(200,164,78,.15)}
+.hero-date{font-family:var(--mono);font-size:clamp(.7rem,1.6vw,.85rem);color:var(--amber);letter-spacing:.18em;text-transform:uppercase}
+.hero-venue{font-family:var(--serif);font-size:clamp(1.3rem,3.2vw,1.9rem);font-weight:900;color:var(--tx);margin-top:.3rem}
+.hero-loc{font-family:var(--mono);font-size:.75rem;color:var(--tm);letter-spacing:.15em;text-transform:uppercase;margin-top:.25rem}
+.hero-stats{display:flex;justify-content:center;gap:2.5rem;margin-top:1.5rem}
+.hero-stat{text-align:center}
+.hero-stat-n{font-family:var(--serif);font-size:1.8rem;font-weight:900;color:var(--amber);line-height:1}
+.hero-stat-l{font-family:var(--mono);font-size:.7rem;color:var(--tm);letter-spacing:.12em;text-transform:uppercase;margin-top:.2rem}
+.hero-cta{display:inline-block;margin-top:1.8rem;font-family:var(--mono);font-size:.8rem;padding:.7rem 1.8rem;background:var(--gold);color:var(--bg);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;font-weight:600;transition:all .3s;box-shadow:0 4px 20px rgba(200,164,78,.2)}
+.hero-cta:hover{background:var(--amber);transform:translateY(-2px);box-shadow:0 6px 30px rgba(200,164,78,.3)}
+
+/* SECTIONS */
+.s{padding:clamp(4rem,10vh,6rem) 2rem;max-width:900px;margin:0 auto}
+.s>*{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.s>*:nth-child(1){transition-delay:.05s}.s>*:nth-child(2){transition-delay:.12s}.s>*:nth-child(3){transition-delay:.19s}.s>*:nth-child(4){transition-delay:.26s}.s>*:nth-child(5){transition-delay:.33s}.s>*:nth-child(6){transition-delay:.4s}.s>*:nth-child(7){transition-delay:.47s}
+.s.v>*{opacity:1;transform:none}
+
+.snum{font-family:var(--serif);font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:900;color:var(--amber);line-height:1;margin-bottom:.3rem}
+.sec-h{font-family:var(--serif);font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:900;line-height:1.08;letter-spacing:-.01em;margin-bottom:.6rem}
+.sec-h em{font-style:italic;color:var(--gold)}
+.sub{color:#BFB5A5;font-size:1.1rem;max-width:52ch;line-height:1.75;margin-bottom:1.2rem}
+
+/* FORMAT GRID */
+.fmt-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin:1.5rem 0}
+.fmt-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:3/4;cursor:default}
+.fmt-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.fmt-card:hover img{transform:scale(1.06)}
+.fmt-card .fmt-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.1) 50%);display:flex;align-items:flex-end;padding:.8rem .7rem}
+.fmt-card .fmt-nm{font-family:var(--serif);font-size:.9rem;font-weight:700;color:var(--tx)}
+
+/* MOSAIC */
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin:1.5rem 0;border-radius:8px;overflow:hidden}
+.mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.mosaic img:hover{transform:scale(1.04)}
+
+/* LINEUP */
+.lineup{display:flex;flex-direction:column;gap:0;margin:1.2rem 0}
+.lu-act{display:flex;gap:1.2rem;align-items:center;padding:1.1rem 0;border-bottom:1px solid rgba(200,164,78,.06)}
+.lu-act:last-of-type{border-bottom:none}
+.lu-photo{width:72px;height:72px;border-radius:6px;object-fit:cover;flex-shrink:0;filter:grayscale(.15)}
+.lu-act:hover .lu-photo{filter:grayscale(0)}
+.lu-info{flex:1;min-width:0}
+.lu-name{font-family:var(--serif);font-size:1.25rem;font-weight:900;text-transform:uppercase;line-height:1.15;letter-spacing:-.01em}
+.lu-role{font-family:var(--mono);font-size:clamp(.72rem,1.3vw,.82rem);color:var(--amber);text-transform:uppercase;letter-spacing:.06em;margin-top:.1rem}
+.lu-desc{font-size:.92rem;color:var(--tm);margin-top:.3rem;line-height:1.5}
+.lu-tba{font-family:var(--sans);font-style:italic;font-size:.95rem;color:var(--tf);padding:1.2rem 0 0;letter-spacing:.02em}
+
+/* NAPKIN SCHEDULE */
+.napkin-wrap{display:flex;justify-content:center;padding:4rem 1.5rem}
+.napkin{position:relative;width:min(700px,94vw);background:var(--sf);border:1px solid var(--bdr);border-radius:4px;transform:rotate(-1deg);box-shadow:0 8px 40px rgba(0,0,0,.4);padding:clamp(2rem,5vw,3rem) clamp(1.5rem,4vw,2.5rem)}
+.napkin::after{content:'';position:absolute;inset:8px;border:1px solid rgba(200,164,78,.08);pointer-events:none}
+.napkin-title{font-family:var(--serif);font-size:clamp(1.2rem,3vw,1.6rem);font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--amber);margin-bottom:1rem}
+.napkin-row{display:flex;gap:.8rem;padding:.7rem 0;border-bottom:1px solid rgba(200,164,78,.06)}
+.napkin-row:last-child{border-bottom:none}
+.napkin-time{font-family:var(--mono);font-size:clamp(.85rem,1.6vw,1rem);color:var(--amber);font-weight:600;min-width:4.5rem;flex-shrink:0}
+.napkin-sep{color:var(--amber);opacity:.3;flex-shrink:0}
+.napkin-desc{font-family:var(--serif);font-style:italic;font-size:clamp(.95rem,1.8vw,1.1rem);color:var(--tx);line-height:1.6}
+.napkin-note{font-family:var(--mono);font-size:.7rem;color:var(--tf);letter-spacing:.1em;display:block;margin-top:.15rem;font-style:normal}
+
+/* VENUE */
+.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:1.2rem 0;border-radius:8px;overflow:hidden}
+.venue-grid img{width:100%;height:200px;object-fit:cover;display:block}
+
+/* QUOTE */
+.quote-strip{padding:4rem 2rem;text-align:center;position:relative}
+.quote-strip blockquote{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.8rem);font-weight:900;font-style:italic;color:var(--tx);max-width:650px;margin:0 auto;line-height:1.25}
+.quote-strip blockquote span{color:var(--gold)}
+
+/* CTA */
+.cta-section{text-align:center;padding:5rem 2rem 4rem}
+.cta-box{background:var(--sf);border:2px solid var(--gold);border-radius:10px;padding:2.5rem;max-width:480px;margin:0 auto;box-shadow:0 0 40px rgba(200,164,78,.06)}
+.cta-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2rem);font-weight:900;margin-bottom:.5rem}
+.cta-sub{color:var(--tm);font-size:1rem;margin-bottom:1.5rem}
+
+/* FOOTER */
+footer{padding:2rem 2rem 3rem;text-align:center;border-top:1px solid rgba(200,164,78,.06)}
+footer p{font-family:var(--mono);font-size:.7rem;color:var(--tf);letter-spacing:.12em;text-transform:uppercase}
+
+/* Mobile */
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:flex}
+.mobile-menu.open{display:flex}
+.fmt-grid{grid-template-columns:repeat(3,1fr)}
+.fmt-card:nth-child(4),.fmt-card:nth-child(5){display:none}
+.mosaic{grid-template-columns:1fr 1fr}
+.mosaic img:nth-child(n+5){display:none}
+.hero-stats{gap:1.5rem}
+.venue-grid{grid-template-columns:1fr}
+.lu-photo{width:60px;height:60px}
+}
+@media(max-width:480px){
+.hero-sign{padding:1rem 1.2rem}
+.hero-stats{flex-direction:column;gap:.8rem}
+.fmt-grid{grid-template-columns:repeat(2,1fr)}
+.fmt-card:nth-child(5){display:block}
+.mosaic{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Progress -->
+<div class="progress" id="progress"></div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#top" class="nav-brand">PUBKEY</a>
+  <div class="nav-links">
+    <a href="#show">The Show</a>
+    <a href="#lineup">Lineup</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#venue">Venue</a>
+  </div>
+  <a href="#rsvp" class="nav-rsvp">RSVP</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#show" onclick="closeMobile()">The Show</a>
+  <a href="#lineup" onclick="closeMobile()">Lineup</a>
+  <a href="#schedule" onclick="closeMobile()">Schedule</a>
+  <a href="#venue" onclick="closeMobile()">Venue</a>
+  <a href="#rsvp" class="nav-rsvp" onclick="closeMobile()">RSVP</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-cover">
+    <img src="images/cover.jpg" alt="">
+  </div>
+  <div class="hero-content">
+    <img src="images/hotstyle-logo.png" alt="HotStyle Takeover" class="hero-logo">
+    <div class="hero-sign">
+      <div class="hero-date">April 27, 2026 &bull; 1 PM – 6 PM</div>
+      <div class="hero-venue">Tao at The Venetian</div>
+      <div class="hero-loc">Las Vegas, NV</div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-n">300</div><div class="hero-stat-l">Tickets</div></div>
+      <div class="hero-stat"><div class="hero-stat-n">VIP</div><div class="hero-stat-l">Open Bar</div></div>
+      <div class="hero-stat"><div class="hero-stat-n">5 hrs</div><div class="hero-stat-l">Party</div></div>
+    </div>
+    <a href="#rsvp" class="hero-cta">Get Your Ticket</a>
+  </div>
+</section>
+
+<!-- THE SHOW -->
+<section id="show">
+<div class="s" id="s1">
+  <div class="snum">01</div>
+  <h2 class="sec-h">The <em>Show</em></h2>
+  <p class="sub">Live podcast. Roast comedy. Live music. DJ set. Open bar for VIP, cash bar for GA. Five hours at one of the most iconic venues on the Strip.</p>
+  <div class="fmt-grid">
+    <div class="fmt-card"><img src="images/fmt-podcast.jpg" alt="Podcast" loading="lazy"><div class="fmt-ov"><div class="fmt-nm">Podcast</div></div></div>
+    <div class="fmt-card"><img src="images/fmt-comedy.jpg" alt="Comedy" loading="lazy"><div class="fmt-ov"><div class="fmt-nm">Comedy</div></div></div>
+    <div class="fmt-card"><img src="images/fmt-music.jpg" alt="Music" loading="lazy"><div class="fmt-ov"><div class="fmt-nm">Music</div></div></div>
+    <div class="fmt-card"><img src="images/fmt-dj.jpg" alt="DJ" loading="lazy"><div class="fmt-ov"><div class="fmt-nm">DJ Set</div></div></div>
+    <div class="fmt-card"><img src="images/fmt-bar.jpg" alt="Bar" loading="lazy"><div class="fmt-ov"><div class="fmt-nm">Open Bar</div></div></div>
+  </div>
+</div>
+</section>
+
+<!-- MOSAIC -->
+<div class="mosaic" style="max-width:1200px;margin:0 auto">
+  <img src="images/event-crowd.jpg" alt="" loading="lazy">
+  <img src="images/event-stage.jpg" alt="" loading="lazy">
+  <img src="images/event-costume.jpg" alt="" loading="lazy">
+  <img src="images/event-singer.jpg" alt="" loading="lazy">
+  <img src="images/event-band.jpg" alt="" loading="lazy">
+  <img src="images/event-venue.jpg" alt="" loading="lazy">
+</div>
+
+<!-- QUOTE -->
+<div class="quote-strip">
+  <blockquote>&ldquo;The best side event at <span>Bitcoin Conference</span>. Period.&rdquo;</blockquote>
+</div>
+
+<!-- LINEUP -->
+<section id="lineup">
+<div class="s" id="s2">
+  <div class="snum">02</div>
+  <h2 class="sec-h">The <em>Lineup</em></h2>
+  <p class="sub">Your hosts and the evening's entertainment — comedy, music, satire, and beats.</p>
+
+  <div class="lineup">
+    <div class="lu-act">
+      <img src="images/marty.jpg" alt="Marty Bent" class="lu-photo">
+      <div class="lu-info">
+        <div class="lu-name">Marty Bent</div>
+        <div class="lu-role">Host &bull; TFTC / Rabbit Hole Recap</div>
+        <div class="lu-desc">Founder of TFTC media and co-host of one of Bitcoin's most popular podcasts.</div>
+      </div>
+    </div>
+    <div class="lu-act">
+      <img src="images/matt.jpg" alt="Matt Odell" class="lu-photo">
+      <div class="lu-info">
+        <div class="lu-name">Matt Odell</div>
+        <div class="lu-role">Host &bull; Rabbit Hole Recap</div>
+        <div class="lu-desc">Privacy advocate, Bitcoin educator, and co-host of Rabbit Hole Recap.</div>
+      </div>
+    </div>
+    <div class="lu-act">
+      <img src="images/thomas-full.jpg" alt="Thomas Pacchia" class="lu-photo">
+      <div class="lu-info">
+        <div class="lu-name">Thomas Pacchia</div>
+        <div class="lu-role">Host &bull; PubKey Founder</div>
+        <div class="lu-desc">Founder of PubKey — NYC's Bitcoin bar and cultural hub. Creator of the HotStyle series.</div>
+      </div>
+    </div>
+    <div class="lu-act">
+      <img src="images/jeremiah-full.jpg" alt="Jeremiah Watkins" class="lu-photo">
+      <div class="lu-info">
+        <div class="lu-name">Jeremiah Watkins</div>
+        <div class="lu-role">Comedy</div>
+        <div class="lu-desc">Kill Tony regular and Comedy Store staple. Unhinged energy guaranteed.</div>
+      </div>
+    </div>
+    <div class="lu-act">
+      <img src="images/bugle.jpg" alt="The Bitcoin Bugle" class="lu-photo">
+      <div class="lu-info">
+        <div class="lu-name">The Bitcoin Bugle</div>
+        <div class="lu-role">Satire</div>
+        <div class="lu-desc">Bitcoin's satirical newspaper delivers live comedy roasting the entire industry.</div>
+      </div>
+    </div>
+    <div class="lu-act">
+      <img src="images/james-opt.jpg" alt="James O'Beirne" class="lu-photo">
+      <div class="lu-info">
+        <div class="lu-name">James O'Beirne</div>
+        <div class="lu-role">DJ Set</div>
+        <div class="lu-desc">Bitcoin Core contributor by day, DJ by night. Closing out the evening with beats.</div>
+      </div>
+    </div>
+    <div class="lu-tba">+ More special guests to be announced</div>
+  </div>
+</div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+<div class="napkin-wrap">
+  <div class="napkin s" id="s3">
+    <div class="napkin-title">The Rundown</div>
+    <div class="napkin-row">
+      <div class="napkin-time">1:00 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">VIP Doors Open <span class="napkin-note">VIP ticket holders only</span></div>
+    </div>
+    <div class="napkin-row">
+      <div class="napkin-time">2:00 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">General Admission Doors</div>
+    </div>
+    <div class="napkin-row">
+      <div class="napkin-time">2:30 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">Live Podcast — Rabbit Hole Recap with Marty &amp; Matt</div>
+    </div>
+    <div class="napkin-row">
+      <div class="napkin-time">3:30 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">Intermission — refill, regroup, hit the bar</div>
+    </div>
+    <div class="napkin-row">
+      <div class="napkin-time">4:00 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">Entertainment — Jeremiah Watkins, The Bitcoin Bugle &amp; more</div>
+    </div>
+    <div class="napkin-row">
+      <div class="napkin-time">5:00 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">Cocktails &amp; DJ Set — James O'Beirne on the decks</div>
+    </div>
+    <div class="napkin-row">
+      <div class="napkin-time">6:00 PM</div>
+      <div class="napkin-sep">/</div>
+      <div class="napkin-desc">Last Call — that's a wrap, but Vegas never sleeps</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- VENUE -->
+<section id="venue">
+<div class="s" id="s4">
+  <div class="snum">03</div>
+  <h2 class="sec-h">The <em>Venue</em></h2>
+  <p class="sub">Tao at The Venetian — one of the most iconic venues on the Las Vegas Strip. Asian-inspired luxury. Three hundred of us. One unforgettable afternoon.</p>
+  <div class="venue-grid">
+    <img src="images/venetian.jpg" alt="The Venetian Resort" loading="lazy">
+    <img src="images/tao.jpg" alt="Tao interior" loading="lazy">
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="rsvp">
+  <div class="cta-box">
+    <h2 class="cta-title">Grab Your Spot</h2>
+    <p class="cta-sub">300 tickets. VIP open bar. Cash bar for GA.<br>Once they're gone, they're gone.</p>
+    <a href="https://example.com/rsvp" class="hero-cta" target="_blank" rel="noopener">RSVP Now</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Produced by PubKey &bull; HotStyle Takeover III &bull; April 27, 2026 &bull; Las Vegas</p>
+</footer>
+
+<script>
+// Scroll progress
+window.addEventListener('scroll',function(){const h=document.documentElement;const p=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('progress').style.width=p+'%'});
+
+// Nav show after scroll
+const navEl=document.getElementById('nav');
+const hero=document.querySelector('.hero');
+const io=new IntersectionObserver(([e])=>{navEl.classList.toggle('show',!e.isIntersecting)},{threshold:0});
+io.observe(hero);
+
+// Hamburger
+const hamburger=document.getElementById('hamburger');const mobileMenu=document.getElementById('mobileMenu');
+hamburger.addEventListener('click',function(){this.classList.toggle('open');mobileMenu.classList.toggle('open');if(mobileMenu.classList.contains('open')){mobileMenu.style.display='flex'}else{setTimeout(()=>{mobileMenu.style.display='none'},300)}});
+function closeMobile(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');setTimeout(()=>{mobileMenu.style.display='none'},300)}
+
+// Section reveals
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target)}})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.s').forEach(el=>obs.observe(el));
+
+// Active nav link
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',function(){let cur='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id});navLinks.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur)})});
+</script>
+</body>
+</html>
